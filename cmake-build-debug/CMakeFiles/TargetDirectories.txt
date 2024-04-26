@@ -1,4 +1,4 @@
-C:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/cmake-build-debug/CMakeFiles/1.dir
+C:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/cmake-build-debug/CMakeFiles/a1.dir
 C:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 C:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/cmake-build-debug/CMakeFiles/list_install_components.dir

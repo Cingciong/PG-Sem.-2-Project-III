@@ -41,39 +41,39 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/cmake-build-debug/
 # =============================================================================
-# Object build statements for MODULE_LIBRARY target 1
+# Object build statements for MODULE_LIBRARY target a1
 
 
 #############################################
-# Order-only phony target for 1
+# Order-only phony target for a1
 
-build cmake_object_order_depends_target_1: phony || cmake_object_order_depends_target_matplot cmake_object_order_depends_target_nodesoup
+build cmake_object_order_depends_target_a1: phony || cmake_object_order_depends_target_matplot cmake_object_order_depends_target_nodesoup
 
-build CMakeFiles/1.dir/main.cpp.obj: CXX_COMPILER__1_unscanned_Debug C$:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/main.cpp || cmake_object_order_depends_target_1
-  DEFINES = -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -D_1_EXPORTS
-  DEP_FILE = CMakeFiles\1.dir\main.cpp.obj.d
+build CMakeFiles/a1.dir/main.cpp.obj: CXX_COMPILER__a1_unscanned_Debug C$:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/main.cpp || cmake_object_order_depends_target_a1
+  DEFINES = -DMATPLOT_BUILD_HIGH_RESOLUTION_WORLD_MAP -DNOMINMAX -Da1_EXPORTS
+  DEP_FILE = CMakeFiles\a1.dir\main.cpp.obj.d
   FLAGS = -g -fvisibility=hidden -fdiagnostics-color=always
   INCLUDES = -I/usr/include/python3.8 -IC:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/matplotplusplus/source -IC:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/cmake-build-debug/matplotplusplus/source/matplot -isystem C:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/pybind11/include -isystem "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0/Include"
-  OBJECT_DIR = CMakeFiles\1.dir
-  OBJECT_FILE_DIR = CMakeFiles\1.dir
+  OBJECT_DIR = CMakeFiles\a1.dir
+  OBJECT_FILE_DIR = CMakeFiles\a1.dir
 
 
 # =============================================================================
-# Link build statements for MODULE_LIBRARY target 1
+# Link build statements for MODULE_LIBRARY target a1
 
 
 #############################################
-# Link the shared module 1.cp312-win_amd64.pyd
+# Link the shared module a1.cp312-win_amd64.pyd
 
-build 1.cp312-win_amd64.pyd: CXX_MODULE_LIBRARY_LINKER__1_Debug CMakeFiles/1.dir/main.cpp.obj | matplotplusplus/source/matplot/libmatplot.a C$:/Users/kulak/AppData/Local/Programs/Python/Python312/libs/python312.lib matplotplusplus/source/3rd_party/libnodesoup.a || matplotplusplus/source/3rd_party/libnodesoup.a matplotplusplus/source/matplot/libmatplot.a
+build a1.cp312-win_amd64.pyd: CXX_MODULE_LIBRARY_LINKER__a1_Debug CMakeFiles/a1.dir/main.cpp.obj | matplotplusplus/source/matplot/libmatplot.a C$:/Users/kulak/AppData/Local/Programs/Python/Python312/libs/python312.lib matplotplusplus/source/3rd_party/libnodesoup.a || matplotplusplus/source/3rd_party/libnodesoup.a matplotplusplus/source/matplot/libmatplot.a
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = matplotplusplus/source/matplot/libmatplot.a  C:/Users/kulak/AppData/Local/Programs/Python/Python312/libs/python312.lib  -lgdi32  matplotplusplus/source/3rd_party/libnodesoup.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\1.dir
+  OBJECT_DIR = CMakeFiles\a1.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = 1.cp312-win_amd64.pyd
-  TARGET_IMPLIB = lib1.dll.a
-  TARGET_PDB = 1.cp312-win_amd64.pyd.dbg
+  TARGET_FILE = a1.cp312-win_amd64.pyd
+  TARGET_IMPLIB = liba1.dll.a
+  TARGET_PDB = a1.cp312-win_amd64.pyd.dbg
 
 
 #############################################
@@ -879,7 +879,7 @@ build pybind11/install/strip: phony pybind11/CMakeFiles/install/strip.util
 # =============================================================================
 # Target aliases.
 
-build 1: phony 1.cp312-win_amd64.pyd
+build a1: phony a1.cp312-win_amd64.pyd
 
 build libmatplot.a: phony matplotplusplus/source/matplot/libmatplot.a
 
@@ -897,7 +897,7 @@ build nodesoup: phony matplotplusplus/source/3rd_party/libnodesoup.a
 #############################################
 # Folder: C:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/cmake-build-debug
 
-build all: phony 1.cp312-win_amd64.pyd matplotplusplus/all pybind11/all
+build all: phony a1.cp312-win_amd64.pyd matplotplusplus/all pybind11/all
 
 # =============================================================================
 

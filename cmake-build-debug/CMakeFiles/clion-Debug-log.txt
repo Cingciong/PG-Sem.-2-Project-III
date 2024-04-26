@@ -14,6 +14,6 @@ Setting matplotplusplus compiler options
 -- pybind11 v2.13.0 dev1
 -- pybind11::lto disabled (problems with undefined symbols for MinGW for now)
 -- pybind11::thin_lto disabled (problems with undefined symbols for MinGW for now)
--- Configuring done (0.8s)
+-- Configuring done (1.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/cmake-build-debug
