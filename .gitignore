@@ -1,6 +1,7 @@
 # Ignore matplotplusplus and pybind11 directories
 /matplotplusplus/
 /pybind11/
+/build/
 
 CMakeFiles/
 CMakeCache.txt
