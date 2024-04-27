@@ -5,7 +5,9 @@
 #include <vector>
 #include <complex>
 #include <cmath>
-
+//i suppsoe we are 5 group
+//so dft signal generation visualization, and  Progowanie sygnału (1 dla > progu, 0 dla mniejszego)
+//https://en.wikipedia.org/wiki/Thresholding_(image_processing)
 const double PI = 3.14159265358979323846;
 namespace py = pybind11;
 using namespace matplot;
@@ -34,7 +36,18 @@ std::vector<double> gen_signal(std::string type, double frequency, double time_p
 
     return signal;
 }
+std::vector<int> threshold_signal(const std::vector<double>& signal, double threshold) {
+    std::vector<int> output(signal.size());
+    for (size_t i = 0; i < signal.size(); ++i) {
+        if (signal[i] > threshold) {
+            output[i] = 1;
+        } else {
+            output[i] = 0;
+        }
+    }
 
+    return output;
+}
 std::vector<double> reverse_dft(const std::vector<std::complex<double>> input) {
     //X(n) = (1/N) * Σ (from k=0 to N-1) X(k) * e^(j2pikn/N)
     int N = input.size();
@@ -67,9 +80,44 @@ std::vector<std::complex<double>> dft(const std::vector<double> input) {
 
     return output;
 }
+void plot_signal(const std::vector<double> signal) {
+    // Generate x values
+//    std::vector<double> x_values(signal.size());
+//    for (size_t i = 0; i < x_values.size(); ++i) {
+//        x_values[i] = i;
+//    }
+//
+//    // Create a new figure
+//    auto f = figure();
+//
+//    // Plot the signal
+//    plot(x_values, signal);
+//
+//    // Display the plot
+//    f->show();
+    using namespace matplot;
+    auto image = imread("lena_gray.tiff");
+    imshow(image);
+
+    show();
+
+}
+void show_image(const std::string& image_path) {
+    // Load the image
+    auto image = imread(image_path);
+
+    // Display the image
+    imshow(image);
+
+    // Show the plot
+    show();
+}
 
 PYBIND11_MODULE(a1, m) {
     m.def("dft", &dft, py::arg("input"), "A function which calculates the Discrete Fourier Transform");
     m.def("reverse_dft", &reverse_dft, py::arg("input"), "A function which calculates the Inverse Discrete Fourier Transform");
     m.def("gen_signal", &gen_signal, py::arg("type"), py::arg("frequency"), py::arg("time_period"), "A function which generates a signal wave");
+    m.def("threshold_signal", &threshold_signal, py::arg("signal"), py::arg("threshold"), "A function which thresholds a signal");
+    m.def("plot_signal", &plot_signal, py::arg("signal"), "A function which plots a signal");
+    m.def("show_image", &show_image, py::arg("image_path"), "A function which shows an image");
 }

@@ -27,7 +27,8 @@ print("dft: ")
 print(dft(sin_wave))
 print("reverse dft: ")
 print(reverse_dft(dft(sin_wave)))
-print("TESTING COMPLETE")
+print("-------------------------------------")
+print(threshold_signal(sin_wave, 0.5))
 
 
 
