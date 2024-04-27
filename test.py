@@ -19,6 +19,10 @@ print("Sin wave: ", sin_wave)
 print("Cos wave: ", cos_wave)
 print("Square wave: ", square_wave)
 print("Sawtooth wave: ", sawtooth_wave)
+print("-------------------------------------")
+print(dft(sin_wave))
+print("TESTING COMPLETE")
+
 
 
 
