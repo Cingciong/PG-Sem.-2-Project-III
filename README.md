@@ -1,3 +1,8 @@
+in /build directory use func:
+cmake .. && make  && python3 ../test.py
+to build and test library.
+
+
 https://github.com/marekjg/tp_projekt_3
 
 # Techniki Programowania - projekt 3
