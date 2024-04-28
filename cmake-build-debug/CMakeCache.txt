@@ -274,13 +274,13 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=pyBind
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=2.13.0
+CMAKE_PROJECT_VERSION:STATIC=1.2.0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MAJOR:STATIC=2
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=13
+CMAKE_PROJECT_VERSION_MINOR:STATIC=2
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_PATCH:STATIC=0
@@ -378,15 +378,8 @@ FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 //Enables QUIET option for all content population
 FETCHCONTENT_QUIET:BOOL=ON
 
-//When not empty, overrides where to find pre-populated content
-// for cpm
-FETCHCONTENT_SOURCE_DIR_CPM:PATH=
-
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of cpm
-FETCHCONTENT_UPDATES_DISCONNECTED_CPM:BOOL=OFF
 
 //Path to a library.
 FFTW_DOUBLE_LIB:FILEPATH=FFTW_DOUBLE_LIB-NOTFOUND
@@ -417,9 +410,6 @@ FFTW_LONGDOUBLE_OPENMP_LIB:FILEPATH=FFTW_LONGDOUBLE_OPENMP_LIB-NOTFOUND
 
 //Path to a library.
 FFTW_LONGDOUBLE_THREADS_LIB:FILEPATH=FFTW_LONGDOUBLE_THREADS_LIB-NOTFOUND
-
-//Git command line client
-GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
 
 //Path to a file.
 JPEG_INCLUDE_DIR:PATH=JPEG_INCLUDE_DIR-NOTFOUND
@@ -479,9 +469,6 @@ MATPLOTPP_WITH_SYSTEM_NODESOUP:BOOL=OFF
 //Value Computed by CMake
 Matplot++_BINARY_DIR:STATIC=C:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/cmake-build-debug/matplotplusplus
 
-//The directory containing a CMake configuration file for Matplot++.
-Matplot++_DIR:PATH=C:/Program Files (x86)/Matplot++/lib/cmake/Matplot++
-
 //Value Computed by CMake
 Matplot++_IS_TOP_LEVEL:STATIC=OFF
 
@@ -533,20 +520,8 @@ PYBIND11_SIMPLE_GIL_MANAGEMENT:BOOL=OFF
 //Build pybind11 test suite?
 PYBIND11_TEST:BOOL=OFF
 
-//Path to a library.
-PYTHON_DEBUG_LIBRARY:FILEPATH=PYTHON_DEBUG_LIBRARY-NOTFOUND
-
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=C:/Users/kulak/AppData/Local/Microsoft/WindowsApps/python3.exe
-
-//Path to a file.
-PYTHON_INCLUDE_DIR:PATH=C:/Users/kulak/AppData/Local/Programs/Python/Python312/include
-
-//Path to a library.
-PYTHON_LIBRARY:FILEPATH=C:/Users/kulak/AppData/Local/Programs/Python/Python312/libs/python312.lib
-
-//Path to a library.
-PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a file.
 TIFF_INCLUDE_DIR:PATH=TIFF_INCLUDE_DIR-NOTFOUND
@@ -849,12 +824,8 @@ FFTW_LONGDOUBLE_THREADS_LIB-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_PYTHON:INTERNAL=C:/Users/kulak/AppData/Local/Microsoft/WindowsApps/python3.exe3.12.3
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/Users/kulak/AppData/Local/Microsoft/WindowsApps/python3.exe][v3.12.3(3.6)]
-//Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[C:/Users/kulak/AppData/Local/Programs/Python/Python312/libs/python312.lib][C:/Users/kulak/AppData/Local/Programs/Python/Python312/include][v3.12.2()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//ADVANCED property for variable: GIT_EXECUTABLE
-GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have symbol __fbufsize
 HAVE_FBUFSIZE:INTERNAL=
 //ADVANCED property for variable: JPEG_INCLUDE_DIR
@@ -868,19 +839,11 @@ PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 PYBIND11_INCLUDE_DIR:INTERNAL=C:/Users/kulak/OneDrive/Documents/AAAAAAAAAVScode/Studia/pyBind/pybind11/include
-//ADVANCED property for variable: PYTHON_DEBUG_LIBRARY
-PYTHON_DEBUG_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_INCLUDE_DIR
-PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
 PYTHON_INCLUDE_DIRS:INTERNAL=C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0/Include
 PYTHON_IS_DEBUG:INTERNAL=0
-PYTHON_LIBRARIES:INTERNAL=C:/Users/kulak/AppData/Local/Programs/Python/Python312/libs/python312.lib
-//ADVANCED property for variable: PYTHON_LIBRARY
-PYTHON_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
-PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+PYTHON_LIBRARIES:INTERNAL=C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.12_3.12.1008.0_x64__qbz5n2kfra8p0/libs/python312.lib
 PYTHON_MODULE_DEBUG_POSTFIX:INTERNAL=
 PYTHON_MODULE_EXTENSION:INTERNAL=.cp312-win_amd64.pyd
 PYTHON_MODULE_PREFIX:INTERNAL=

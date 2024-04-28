@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22.1)
-
+add_compile_options(-flto) # for example
 set(MODULE_NAME "a1")
 project(pyBind)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)

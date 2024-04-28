@@ -29,7 +29,7 @@ print("reverse dft: ")
 print(reverse_dft(dft(sin_wave)))
 print("-------------------------------------")
 print(threshold_signal(sin_wave, 0.5))
-
+plot_signal(sin_wave)
 
 
 

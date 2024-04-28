@@ -81,37 +81,25 @@ std::vector<std::complex<double>> dft(const std::vector<double> input) {
     return output;
 }
 void plot_signal(const std::vector<double> signal) {
-    // Generate x values
-//    std::vector<double> x_values(signal.size());
-//    for (size_t i = 0; i < x_values.size(); ++i) {
-//        x_values[i] = i;
-//    }
-//
-//    // Create a new figure
-//    auto f = figure();
-//
-//    // Plot the signal
-//    plot(x_values, signal);
-//
-//    // Display the plot
-//    f->show();
     using namespace matplot;
-    auto image = imread("lena_gray.tiff");
-    imshow(image);
 
-    show();
+    // Generate x values
+    std::vector<double> x_values(signal.size());
+    for (size_t i = 0; i < x_values.size(); ++i) {
+        x_values[i] = i;
+    }
 
+    // Create a new figure
+    auto f = figure();
+
+    // Plot the signal
+    plot(x_values, signal);
+
+    // Display the plot
+    f->show();
 }
-void show_image(const std::string& image_path) {
-    // Load the image
-    auto image = imread(image_path);
 
-    // Display the image
-    imshow(image);
 
-    // Show the plot
-    show();
-}
 
 PYBIND11_MODULE(a1, m) {
     m.def("dft", &dft, py::arg("input"), "A function which calculates the Discrete Fourier Transform");
@@ -119,5 +107,4 @@ PYBIND11_MODULE(a1, m) {
     m.def("gen_signal", &gen_signal, py::arg("type"), py::arg("frequency"), py::arg("time_period"), "A function which generates a signal wave");
     m.def("threshold_signal", &threshold_signal, py::arg("signal"), py::arg("threshold"), "A function which thresholds a signal");
     m.def("plot_signal", &plot_signal, py::arg("signal"), "A function which plots a signal");
-    m.def("show_image", &show_image, py::arg("image_path"), "A function which shows an image");
 }
