@@ -1,9 +1,11 @@
 Karolina Wajszczuk i Igor Maciejak ACiR 2 
+
+# How to startup
 in /build directory use func:
 cmake .. && make  && python3 ../test.py
 to build and test library.
 
-
+# Below README.md from example project. 
 https://github.com/marekjg/tp_projekt_3
 
 # Techniki Programowania - projekt 3
