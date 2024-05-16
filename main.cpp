@@ -80,6 +80,22 @@ std::vector<std::complex<double>> dft(const std::vector<double> input) {
 
     return output;
 }
+std::vector<double> dft_magnitude(const std::vector<double> input) {
+    int N = input.size();
+    std::vector<std::complex<double>> output_complex(N);
+    std::vector<double> output_magnitude(N);
+
+    for (int k = 0; k < N; k++) {
+        for (int n = 0; n < N; n++) {
+            double theta = -2 * PI * k * n / N;
+            std::complex<double> exp_part(std::cos(theta), std::sin(theta));
+            output_complex[k] = output_complex[k] + input[n] * exp_part;
+        }
+        output_magnitude[k] = std::abs(output_complex[k]);
+    }
+
+    return output_magnitude;
+}
 void plot_signal(const std::vector<double> signal) {
     using namespace matplot;
 
@@ -99,12 +115,11 @@ void plot_signal(const std::vector<double> signal) {
     f->show();
 }
 
-
-
 PYBIND11_MODULE(a1, m) {
     m.def("dft", &dft, py::arg("input"), "A function which calculates the Discrete Fourier Transform");
     m.def("reverse_dft", &reverse_dft, py::arg("input"), "A function which calculates the Inverse Discrete Fourier Transform");
     m.def("gen_signal", &gen_signal, py::arg("type"), py::arg("frequency"), py::arg("time_period"), "A function which generates a signal wave");
     m.def("threshold_signal", &threshold_signal, py::arg("signal"), py::arg("threshold"), "A function which thresholds a signal");
     m.def("plot_signal", &plot_signal, py::arg("signal"), "A function which plots a signal");
+    m.def("dft_magnitude", &dft_magnitude, py::arg("input"), "A function which calculates the magnitude of the Discrete Fourier Transform");
 }

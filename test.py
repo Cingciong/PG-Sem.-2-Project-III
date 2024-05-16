@@ -1,12 +1,26 @@
 from build.a1 import *
+from typing import List
+import wave
+import struct
 
-frequency = 1  # Set the frequency
-time_period = 1  # Set the time period
+def read_wave(filename: str, target_length: int = 1000) -> List[int]:
+    with wave.open(filename) as f:
+        data = f.readframes(f.getnframes())
+        samples = struct.unpack('{n}h'.format(n=f.getnframes()*f.getnchannels()), data)
+        samples = list(samples)
 
+    # Calculate the downsampling factor
+    factor = len(samples) // target_length
 
+    # Downsample the list
+    downsampled_samples = samples[::factor]
+
+    return downsampled_samples
+
+audio = read_wave("test.wav", 1000)
 def test_signals():
-    frequency = 1  # Set the frequency
-    time_period = 1  # Set the time period
+    frequency = 60  # Set the frequency
+    time_period = 500  # Set the time period
 
     sin_wave = gen_signal("sin", frequency, time_period)
     cos_wave = gen_signal("cos", frequency, time_period)
@@ -29,7 +43,7 @@ print("reverse dft: ")
 print(reverse_dft(dft(sin_wave)))
 print("-------------------------------------")
 print(threshold_signal(sin_wave, 0.5))
-plot_signal(sin_wave)
+plot_signal(dft_magnitude(audio))
 
 
 
