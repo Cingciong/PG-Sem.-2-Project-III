@@ -1,3 +1,4 @@
+Karolina Wajszczuk i Igor Maciejak ACiR 2 
 in /build directory use func:
 cmake .. && make  && python3 ../test.py
 to build and test library.
