@@ -1,4 +1,8 @@
-Karolina Wajszczuk i Igor Maciejak ACiR 2 
+# Karolina Wajszczuk 198009 i Igor Maciejak 197838 ACiR 2 
+Przez to że poziom projektu był dość wysoki a Karolina nie korzystała nigdy z narzędzi takich jak github,
+postanowiliśmy że będę łaczył jej elementy kodu do github'a , wszystkie commity są moje ale podkreślam że Karolina brała taki sam udział w projekcie co ja, zrobiła: wszystkie funkcje dft oraz treshold_function. Reszte  zrobiłem ja 
+-Igor Maciejak  
+
 
 # How to startup
 in /build directory use func:
